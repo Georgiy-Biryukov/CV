@@ -3,7 +3,7 @@
 *{
 	margin: 0;
 	padding: 0;
-	list-style: none;
+	list-style: inside;
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 }
@@ -14,12 +14,26 @@ body{
 	line-height: 20px;
 }
 
+h2 {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 16px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+p {
+	color: #6b7280;
+}
+
 .resume_wrapper{
 	display: flex;
 	width: 800px;
 	margin: 50px auto;
 	background: #fff;
-	padding: 10px;
 }
 
 .resume_wrapper .resume_left{
@@ -38,15 +52,17 @@ body{
 
 .resume_wrapper .resume_title{
 	color: #fff;
-	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 16px;
 	margin-bottom: 10px;
-	letter-spacing: 4px;
 }
 
 .resume_wrapper .resume_left .resume_info{
 	color: #84838b;
+}
+
+.resume_wrapper .resume_right li span {
+	color: #6b7280;
 }
 
 .resume_wrapper .resume_left .resume_bottom{
@@ -69,15 +85,19 @@ body{
 .resume_wrapper .resume_namerole .name{
 	font-size: 20px;
 	color: #fff;
-	text-transform: uppercase;
 	font-weight: 700;
 	margin-bottom: 5px;
-	letter-spacing: 4px;
 }
 
 .resume_wrapper .resume_left .resume_namerole .role{
 	color: #84838b;
+	margin-bottom: 5px;
 }
+
+.resume_wrapper .resume_left .resume_namerole .age{
+	color: #84838b;
+}
+
 
 .resume_wrapper .resume_left .resume_contact .resume_info:last-child{
 	 margin-top: 10px;
@@ -136,17 +156,17 @@ body{
 
 .resume_wrapper .resume_right .resume_data .year{
 	padding-right: 35px;
-	width: 115px;
+	width: 130px;
 	position: relative;
 }
 
 .resume_wrapper .resume_right .resume_data .content{
 	padding-left: 35px;
 	margin-bottom: 20px;
-	width: calc(100% - 115px);
+	width: calc(100% - 130px);
 }
 
-.resume_wrapper .resume_right .resume_data .year:before{
+.resume_wrapper .resume_right .resume_data.resume-education .year:before{
 	content: "";
 	position: absolute;
 	top: 5px;
@@ -158,7 +178,7 @@ body{
 	border-radius: 50%;
 }
 
-.resume_wrapper .resume_right .resume_data .year:after{
+.resume_wrapper .resume_right .resume_data.resume-education .year:after{
 	content: "";
     position: absolute;
     top: 17px;
@@ -168,7 +188,7 @@ body{
     background: #0175b2;
 }
 
-.resume_wrapper .resume_right .resume_data:last-child .year:after{
+.resume_wrapper .resume_right .resume_data.resume-education:last-child .year:after{
 	display: none;
 }
 
